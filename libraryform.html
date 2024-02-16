@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Library Form</title>
+        <link rel="'stylesheet" href="libform.css" type="text/css">
+        <script src="lbform.js"></script>
+    </head>
+    <!-- onload="document.registration.name.focus()" -->
+    <body> 
+        <h1>Registration</h1>
+        <form name="registration" onSubmit="formValidation();">
+            <label for="username">Name:</label>                 <input placeholder="blah blah" type="text" name="username" size="30" required /><br>
+            <label for="USN">USN:</label>                       <input type="text" name="USN" size="12"  required/><br>
+            <label for="email">Email:</label>                   <input type="email"  name="email" size="50"  required/><br>
+            <label for="phno">Phone number:</label>             <input type="tel" name="phno" size="10" required /><br>
+            <label for="dob">Date of Birth:</label>             <input type="date" name="dob"  required/><br>
+
+            <label id="gender">Sex:</label>                     
+            <input type="radio" name="sex" value="Male" id="male" />    <span>Male</span>
+            <input type="radio" name="sex" value="Female" id="female" /><span>Female</span><br>
+
+            <label>Number of Books:</label>
+            <input type="checkbox" name="nb" value="1"><span>1</span>
+            <input type="checkbox" name="nb" value="2"><span>2</span>
+            <input type="checkbox" name="nb" value="3"><span>3</span>
+            <input type="checkbox" name="nb" value="4"><span>4</span>
+            <input type="checkbox" name="nb" value="5"><span>5</span><br>
+
+            <label for="sem">Semester:</label>
+            <select name="sem">
+                <option selected="" value="Default">Select which sem u are currently in:</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+                <option value="VI">VI</option>
+                <option value="VII">VII</option>
+                <option value="VIII">VIII</option>
+            </select><br>
+            
+            <input type="submit" name="submit" value="Submit" onsubmit="GetSelected()" />
+        </form>
+
+        <div id="selectedValues"></div>
+
+
+    </body>
+</html>
